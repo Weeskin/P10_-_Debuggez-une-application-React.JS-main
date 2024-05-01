@@ -3,11 +3,12 @@ import { getMonth } from "../../helpers/Date";
 
 import "./style.scss";
 
+// suppression des chemins de fichiers dans imageSrc et title
 const EventCard = ({
-	imageSrc = "",
+	imageSrc,
 	imageAlt,
 	date = new Date(),
-	title = "",
+	title,
 	label,
 	small = false,
 	...props
@@ -33,22 +34,17 @@ const EventCard = ({
 );
 
 EventCard.propTypes = {
-	imageSrc: PropTypes.string,
+	imageSrc: PropTypes.string.isRequired,
 	imageAlt: PropTypes.string,
-	date: PropTypes.instanceOf(Date),
-	title: PropTypes.string,
+	date: PropTypes.instanceOf(Date).isRequired,
+	title: PropTypes.string.isRequired,
 	small: PropTypes.bool,
-	label: PropTypes.string
+	label: PropTypes.string.isRequired
 };
 
 EventCard.defaultProps = {
-	imageSrc:
-		"../../../public/images/priscilla-du-preez-Q7wGvnbuwj0-unsplash1.png",
 	imageAlt: "image",
-	title: "Event title",
-	small: false,
-	date: "2021-01-01",
-	label: "new"
+	small: false
 };
 
 export default EventCard;
