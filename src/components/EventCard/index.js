@@ -3,7 +3,7 @@ import { getMonth } from "../../helpers/Date";
 
 import "./style.scss";
 
-// suppression des chemins de fichiers dans imageSrc et title
+// Suppression des chemins de fichiers dans imageSrc et title
 const EventCard = ({
 	imageSrc,
 	imageAlt,
