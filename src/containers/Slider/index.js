@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useEffect, useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { getMonth } from "../../helpers/Date";
@@ -15,7 +14,7 @@ const Slider = () => {
 		// ajout d'une condition if pour vérifier que byDateDesc n'est pas undefined
 		if (byDateDesc !== undefined) {
 			setTimeout(
-				// ajout du -1 pour complèter le tableau pour qu'il boucle bien sur les donner existant
+				// ajout du -1 pour complèter le tableau pour qu'il boucle bien sur les données existant
 				() => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
 				5000
 			);
